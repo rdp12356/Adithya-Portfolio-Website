@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #bd9dff;
+  --color-secondary: #6a9cff;
+  --color-tertiary: #69daff;
+  --color-background: #050505;
+  --color-surface: #111111;
+  --color-surface-hover: #1a1a1a;
+  --color-foreground: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --font-sans: "Inter", "Outfit", system-ui, sans-serif;
+  --font-mono: "Fira Code", "Space Mono", monospace;
+
+  --radius-premium: 1.25rem;
+  
+  --animate-orbit: orbit 20s linear infinite;
+  --animate-glitch: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+}
+
+:root {
+  --primary: #bd9dff;
+  --secondary: #6a9cff;
+  --background: #050505;
+  --foreground: #ffffff;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-sans;
+  }
+}
+
+@utility glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@utility glass-card {
+  @apply glass rounded-premium transition-all duration-500 hover:bg-white/10 hover:border-white/20;
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+}
+
+@utility text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-primary via-white to-secondary;
+}
+
+@utility bg-gradient-premium {
+  @apply bg-gradient-to-br from-primary via-primary to-secondary;
+}
+
+@utility glow-primary {
+  filter: drop-shadow(0 0 15px rgba(189, 157, 255, 0.4));
+}
+
+@utility btn-premium {
+  @apply relative px-8 py-4 bg-gradient-premium rounded-xl font-bold flex items-center gap-2 
+         hover:scale-[1.02] transition-all duration-300 active:scale-95 shadow-[0_0_30px_-5px_rgba(189,157,255,0.4)];
+}
+
+@utility btn-glass {
+  @apply relative px-8 py-4 glass rounded-xl font-bold flex items-center gap-2 
+         hover:bg-white/10 transition-all duration-300 active:scale-95;
+}
+
+@utility bento-grid {
+  @apply grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[180px];
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/10 rounded-full hover:bg-primary/40 transition-colors;
+}
+
+/* Hide scrollbar for clean look but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@keyframes scan {
+  0% { transform: translateY(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(100%); opacity: 0; }
+}
+
+@keyframes warp {
+  0% { transform: scale(1) translateZ(0); }
+  100% { transform: scale(1.1) translateZ(100px); }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
