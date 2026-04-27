@@ -108,103 +108,111 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <motion.div style={{ y, opacity }} className="flex flex-col items-center lg:items-start text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-3 px-5 py-2 rounded-full glass mb-12 border-white/5 group cursor-default"
-            >
-              <div className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-50"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-              </div>
-              <span className="text-[9px] font-bold text-white/40 uppercase tracking-[0.4em] font-mono group-hover:text-primary transition-colors">
-                System_Node // Alpha_Build
-              </span>
-            </motion.div>
-            
-            <div className="mb-8 relative">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] text-white">
-                <span className="relative inline-block">
-                   <ScrambleText text="Creative" />
-                   <motion.div 
-                    animate={{ width: ["0%", "100%", "0%"] }}
-                    transition={{ duration: 6, repeat: Infinity }}
-                    className="absolute bottom-0 left-0 h-[2px] bg-primary/50 rounded-full blur-[1px]"
-                   />
+            <motion.div style={{ y, opacity }} className="flex flex-col items-center lg:items-start text-center lg:text-left will-change-transform">
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="inline-flex items-center gap-3 px-5 py-2 rounded-full glass mb-12 border-white/5 group cursor-default"
+              >
+                <div className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-50"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                </div>
+                <span className="text-[9px] font-bold text-white/40 uppercase tracking-[0.4em] font-mono group-hover:text-primary transition-colors">
+                  System_Node // Alpha_Build
                 </span>
-                <br />
-                <span className="text-gradient brightness-90">
-                  <ScrambleText text="Developer" delay={0.5} />
-                </span>
-              </h1>
-            </div>
-            
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="flex items-center gap-6 mb-10"
-            >
-              <div className="w-16 h-[2px] bg-gradient-to-r from-primary to-transparent" />
-              <span className="text-2xl md:text-3xl text-white/90 font-mono font-medium tracking-tight">
-                {typedText}
-                <motion.span 
-                  animate={{ opacity: [1, 0, 1] }}
-                  transition={{ duration: 0.8, repeat: Infinity }}
-                  className="text-primary ml-1"
-                >_</motion.span>
-              </span>
-            </motion.div>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="text-xl text-white/50 max-w-xl mb-12 leading-relaxed font-light"
-            >
-              {bio.hero}
-            </motion.p>
-            
-            <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
-              <Magnetic>
-                <a href="#projects" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-xl font-bold text-sm tracking-[0.2em] overflow-hidden transition-all hover:scale-105 neon-primary active:scale-95 shadow-xl">
-                  <span className="absolute inset-0 bg-gradient-to-r from-secondary/80 to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="relative z-10 flex items-center gap-2">
-                    EXPLORE_ARCHIVE <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </a>
-              </Magnetic>
+              </motion.div>
               
-              <Magnetic>
-                <a href="#contact" className="btn-glass px-8 py-4 group text-sm font-bold tracking-[0.1em] border border-white/10 hover:border-primary/30 transition-all active:scale-95 shadow-lg">
-                  <Terminal size={18} className="text-primary group-hover:rotate-12 transition-transform" />
-                  ESTABLISH_UPLINK
-                </a>
-              </Magnetic>
-            </div>
-          </motion.div>
+              <div className="mb-8 relative">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.9] text-white">
+                  <span className="relative inline-block">
+                     <ScrambleText text="Creative" />
+                     <motion.div 
+                      animate={{ width: ["0%", "100%", "0%"] }}
+                      transition={{ duration: 6, repeat: Infinity }}
+                      className="absolute bottom-0 left-0 h-[2px] bg-primary/50 rounded-full blur-[1px]"
+                     />
+                  </span>
+                  <br />
+                  <span className="text-gradient brightness-90">
+                    <ScrambleText text="Developer" delay={0.5} />
+                  </span>
+                </h1>
+              </div>
+              
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.8 }}
+                className="flex items-center gap-6 mb-10"
+              >
+                <div className="w-16 h-[2px] bg-gradient-to-r from-primary to-transparent" />
+                <span className="text-2xl md:text-3xl text-white/90 font-mono font-medium tracking-tight">
+                  {typedText}
+                  <motion.span 
+                    animate={{ opacity: [1, 0, 1] }}
+                    transition={{ duration: 0.8, repeat: Infinity }}
+                    className="text-primary ml-1"
+                  >_</motion.span>
+                </span>
+              </motion.div>
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="text-xl text-white/50 max-w-xl mb-12 leading-relaxed font-light"
+              >
+                {bio.hero}
+              </motion.p>
+              
+              <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
+                <Magnetic>
+                  <a href="#projects" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-xl font-bold text-sm tracking-[0.2em] overflow-hidden transition-all hover:scale-105 neon-primary active:scale-95 shadow-xl">
+                    <span className="absolute inset-0 bg-gradient-to-r from-secondary/80 to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <span className="relative z-10 flex items-center gap-2">
+                      EXPLORE_ARCHIVE <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </a>
+                </Magnetic>
+                
+                <Magnetic>
+                  <a href="#contact" className="btn-glass px-8 py-4 group text-sm font-bold tracking-[0.1em] border border-white/10 hover:border-primary/30 transition-all active:scale-95 shadow-lg">
+                    <Terminal size={18} className="text-primary group-hover:rotate-12 transition-transform" />
+                    ESTABLISH_UPLINK
+                  </a>
+                </Magnetic>
+              </div>
+            </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.5 }}
-            className="relative hidden lg:flex h-[700px] items-center justify-center"
-          >
-            {/* Energy Aura behind 3D Scene */}
-            <div className="absolute w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] animate-pulse" />
-            
-            {/* 3D Scene Container */}
-            <div className="absolute inset-0 cursor-grab active:cursor-grabbing">
-              <React.Suspense fallback={<div className="w-full h-full flex items-center justify-center"><div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" /></div>}>
-                <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
-                  <ambientLight intensity={1.5} />
-                  <pointLight position={[10, 10, 10]} intensity={3} color="#bd9dff" />
-                  <pointLight position={[-10, -10, -10]} intensity={2} color="#6a9cff" />
-                  <FloatingCore />
-                </Canvas>
-              </React.Suspense>
-            </div>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5 }}
+              className="relative hidden lg:flex h-[700px] items-center justify-center will-change-transform"
+            >
+              <div className="absolute w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] animate-pulse" />
+              
+              <div className="absolute inset-0 cursor-grab active:cursor-grabbing">
+                <React.Suspense fallback={<div className="w-full h-full flex items-center justify-center"><div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" /></div>}>
+                  <Canvas 
+                    dpr={[1, 1.5]}
+                    gl={{ 
+                      powerPreference: "high-performance",
+                      alpha: true,
+                      antialias: false,
+                      stencil: false,
+                      depth: true
+                    }}
+                    camera={{ position: [0, 0, 5], fov: 45 }}
+                  >
+                    <ambientLight intensity={1.5} />
+                    <pointLight position={[10, 10, 10]} intensity={3} color="#bd9dff" />
+                    <pointLight position={[-10, -10, -10]} intensity={2} color="#6a9cff" />
+                    <FloatingCore />
+                  </Canvas>
+                </React.Suspense>
+              </div>
 
             {/* Floating Decorative Elements */}
             <div className="absolute inset-0 pointer-events-none">
