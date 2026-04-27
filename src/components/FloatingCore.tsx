@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { MeshDistortMaterial, Float, Sphere, MeshWobbleMaterial } from "@react-three/drei";
+import { MeshDistortMaterial, Float, Sphere, MeshWobbleMaterial, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
 export default function FloatingCore() {
@@ -8,14 +8,12 @@ export default function FloatingCore() {
   const ringRef1 = useRef<THREE.Mesh>(null!);
   const ringRef2 = useRef<THREE.Mesh>(null!);
 
+  const texture = useTexture("/profile.jpg");
+
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
     
-    if (meshRef.current) {
-      meshRef.current.rotation.x = time * 0.2;
-      meshRef.current.rotation.y = time * 0.3;
-    }
-
+    // The rings still rotate, but the photo stays stable
     if (ringRef1.current) {
       ringRef1.current.rotation.z = time * 0.5;
       ringRef1.current.rotation.x = Math.sin(time * 0.5) * 0.2;
@@ -29,20 +27,16 @@ export default function FloatingCore() {
 
   return (
     <group scale={1.5}>
-      <Float speed={2} rotationIntensity={1} floatIntensity={1}>
-        {/* Central Core */}
-        <Sphere args={[1, 64, 64]} ref={meshRef}>
-          <MeshDistortMaterial
-            color="#bd9dff"
-            attach="material"
-            distort={0.4}
-            speed={2}
-            roughness={0}
-            metalness={1}
-            opacity={0.8}
+      <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+        {/* Flat Profile Photo - Perfect Visibility */}
+        <mesh ref={meshRef}>
+          <circleGeometry args={[1, 64]} />
+          <meshBasicMaterial
+            map={texture}
             transparent
+            side={THREE.DoubleSide}
           />
-        </Sphere>
+        </mesh>
 
         {/* Energy Rings */}
         <mesh ref={ringRef1} rotation={[Math.PI / 2, 0, 0]}>
