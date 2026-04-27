@@ -166,19 +166,19 @@ export default function Hero() {
               {bio.hero}
             </motion.p>
             
-            <div className="flex flex-wrap gap-8 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
               <Magnetic>
-                <a href="#projects" className="group relative px-10 py-5 bg-primary text-white rounded-2xl font-black text-lg tracking-widest overflow-hidden transition-all hover:scale-105 neon-primary active:scale-95">
-                  <span className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="relative z-10 flex items-center gap-3">
-                    EXPLORE_ARCHIVE <ArrowRight size={22} className="group-hover:translate-x-2 transition-transform" />
+                <a href="#projects" className="group relative inline-flex items-center gap-3 px-8 py-4 bg-primary text-white rounded-xl font-bold text-sm tracking-[0.2em] overflow-hidden transition-all hover:scale-105 neon-primary active:scale-95 shadow-xl">
+                  <span className="absolute inset-0 bg-gradient-to-r from-secondary/80 to-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <span className="relative z-10 flex items-center gap-2">
+                    EXPLORE_ARCHIVE <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                 </a>
               </Magnetic>
               
               <Magnetic>
-                <a href="#contact" className="btn-glass px-10 py-5 group text-lg font-bold border-2 border-white/10 hover:border-primary/50 transition-all active:scale-95">
-                  <Terminal size={22} className="text-primary group-hover:rotate-12 transition-transform" />
+                <a href="#contact" className="btn-glass px-8 py-4 group text-sm font-bold tracking-[0.1em] border border-white/10 hover:border-primary/30 transition-all active:scale-95 shadow-lg">
+                  <Terminal size={18} className="text-primary group-hover:rotate-12 transition-transform" />
                   ESTABLISH_UPLINK
                 </a>
               </Magnetic>
