@@ -17,20 +17,20 @@ export const portfolioData = {
     activeYears: 3
   },
   bio: {
-    hero: "I build projects, break them, fix them, and learn in the process. Currently a 12th-grade student exploring the frontiers of AI and robotics.",
+    hero: "Architecting high-fidelity digital solutions through the lens of AI, robotics, and full-stack engineering. Transforming complex system logic into elegant, user-centric realities.",
     about: [
-      "I’m a student developer who spends most of my time turning ideas into real, working projects—sometimes successfully on the first try, often after debugging for hours.",
-      "I primarily work with Python, building automations, logic-based tools, and small applications. I’ve also worked with React and TypeScript to build full-stack applications.",
-      "My interests lie in AI, robotics, and software development—anything that lets me build something from scratch and see it come to life.",
-      "Beyond development, I enjoy video editing, game development experiments, and exploring new technologies."
+      "I am a developer dedicated to building impactful, production-ready applications that solve real-world problems. My process is driven by architectural precision and a deep curiosity for emerging technologies.",
+      "With a primary focus on Python-driven automation and AI, I also leverage modern frontend frameworks like React and TypeScript to create seamless, high-fidelity user experiences.",
+      "My expertise extends to hardware-software integration, particularly in robotics and electronics, where I bridge the gap between physical systems and intelligent code.",
+      "Beyond technical development, I am committed to continuous growth, exploring the boundaries of machine learning and large-scale digital architecture."
     ],
-    mindset: "I focus on building practical, usable projects rather than just theoretical ideas—learning through experimentation and iteration."
+    mindset: "I prioritize architectural integrity and user-centric design—transforming complex ideas into efficient, scalable, and beautifully crafted digital realities."
   },
   contact: {
     email: "adithyashyam1@gmail.com",
     phone: "+91 9633555679",
     github: "https://github.com/soulcoder354",
-    instagram: "https://www.instagram.com/a.dth_shym?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+    instagram: "https://www.instagram.com/a.dth_shym"
   },
   skills: [
     {
@@ -58,7 +58,7 @@ export const portfolioData = {
   projects: [
     {
       title: "AuraTune",
-      description: "A premium sound frequency application designed for audio manipulation and tuning, built with advanced signal processing logic.",
+      description: "AuraTune combines ancient sound healing wisdom with modern neuroscience. It delivers a beautifully designed audio experience featuring high-fidelity binaural frequencies (Delta, Theta, Beta, Gamma) and solfeggio tones to help you reach peak concentration, restorative sleep, or deep meditation.",
       tech: ["Python", "Audio Processing", "Automation"],
       github: "https://github.com/rdp12356/auratune",
       repo: "rdp12356/auratune",
@@ -66,44 +66,36 @@ export const portfolioData = {
       color: "from-purple-500/10 to-blue-500/10"
     },
     {
-      title: "Web Development Projects",
-      description: "A collection of responsive, high-performance web applications built using HTML, CSS, and JavaScript.",
+      title: "Robotics Academy",
+      description: "A comprehensive curriculum and hardware framework for teaching robotics and electronics. Focuses on Arduino-based systems, sensor integration, and hands-on circuit design, empowering the next generation of hardware engineers.",
+      tech: ["Arduino", "Robotics", "Hardware Design"],
+      github: "https://github.com/soulcoder354/Robotics-Curriculum",
+      repo: "soulcoder354/Robotics-Curriculum",
+      color: "from-orange-500/10 to-red-500/10"
+    },
+    {
+      title: "Digital Experience Showcase",
+      description: "A curated collection of high-performance web applications and design systems. Focuses on fluid user experiences, accessibility, and modern frontend architectures built with HTML5, CSS3, and JavaScript.",
       tech: ["HTML5", "CSS3", "JavaScript"],
       github: "https://github.com/soulcoder354",
       repo: "soulcoder354",
-      color: "from-blue-500/10 to-cyan-500/10"
-    },
-    {
-      title: "React + TypeScript App",
-      description: "A robust full-stack application leveraging the power of React and TypeScript for type-safe, scalable UI.",
-      tech: ["React", "TypeScript", "Tailwind"],
-      github: "https://github.com/soulcoder354",
-      repo: "soulcoder354/Soul-GPT",
       color: "from-cyan-500/10 to-emerald-500/10"
-    },
-    {
-      title: "Robotics Teaching",
-      description: "Hands-on curriculum development and hardware implementation for teaching robotics and electronics.",
-      tech: ["Robotics", "Electronics", "Arduino"],
-      github: "https://github.com/soulcoder354",
-      repo: "soulcoder354/Robotics-Curriculum",
-      color: "from-orange-500/10 to-red-500/10"
     }
   ],
   experience: [
     {
       role: "Robotics Instructor",
-      company: "Robotics Academy / Workshop",
+      company: "Robotics Academy & Workshops",
       period: "2023 - Present",
-      desc: "Teaching electronics and hands-on learning to young enthusiasts. Focusing on Arduino, sensor integration, and basic circuit design."
+      desc: "Instructing young enthusiasts in electronics and robotics. Specializing in Arduino-based systems, sensor integration, and fundamental circuit design through hands-on workshops."
     }
   ],
   education: [
     {
-      degree: "12th Grade (Science Stream)",
-      school: "High School",
+      degree: "Senior Secondary (Science Stream)",
+      school: "Academic Excellence High School",
       period: "Current",
-      desc: "Chosen the Science stream with a focus on Physics, Chemistry, and Mathematics, while self-studying computer science and AI."
+      desc: "Pursuing a focus in Physics, Chemistry, and Mathematics (PCM). Actively specializing in Computer Science with an independent focus on Artificial Intelligence and software architecture."
     }
   ]
 };

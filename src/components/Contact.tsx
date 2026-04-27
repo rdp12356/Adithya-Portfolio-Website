@@ -59,13 +59,12 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <div className="inline-flex items-center gap-3 px-4 py-2 glass rounded-full mb-8 border-white/5">
-              <Terminal size={14} className="text-primary" />
-              <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.3em] font-mono">Transmission_Channel_01</span>
+              <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.3em]">Get in Touch</span>
             </div>
             
             <h2 className="text-5xl md:text-7xl font-bold text-white tracking-tighter mb-8 leading-[0.9]">
-              Establish <br />
-              <span className="text-gradient">Connection</span>
+              Let's <br />
+              <span className="text-gradient">Connect</span>
             </h2>
             
             <p className="text-lg text-foreground/50 font-light max-w-md mb-12 leading-relaxed">
@@ -79,7 +78,7 @@ export default function Contact() {
                     <Mail size={24} />
                   </div>
                   <div>
-                    <p className="text-[10px] text-foreground/30 font-bold uppercase tracking-widest mb-1 font-mono">NETWORK_NODE_EMAIL</p>
+                    <p className="text-[10px] text-foreground/40 font-bold uppercase tracking-widest mb-1">Direct Email</p>
                     <p className="text-xl font-bold text-white">{contact.email}</p>
                   </div>
                 </a>
@@ -92,7 +91,7 @@ export default function Contact() {
                       <Phone size={18} />
                     </div>
                     <div>
-                      <p className="text-[8px] text-foreground/30 font-bold uppercase tracking-[0.2em] font-mono">ENCRYPTED_VOICE</p>
+                      <p className="text-[8px] text-foreground/40 font-bold uppercase tracking-[0.2em]">Phone Number</p>
                       <p className="text-sm font-bold text-white">{contact.phone}</p>
                     </div>
                   </a>
@@ -103,7 +102,7 @@ export default function Contact() {
                     <MapPin size={18} />
                   </div>
                   <div>
-                    <p className="text-[8px] text-foreground/30 font-bold uppercase tracking-[0.2em] font-mono">CURRENT_LOCATION</p>
+                    <p className="text-[8px] text-foreground/40 font-bold uppercase tracking-[0.2em]">Current Location</p>
                     <p className="text-sm font-bold text-white">Kerala, India</p>
                   </div>
                 </div>
@@ -151,8 +150,8 @@ export default function Contact() {
                     <div className="w-24 h-24 bg-primary/20 text-primary rounded-full flex items-center justify-center mb-8 shadow-[0_0_40px_rgba(189,157,255,0.3)]">
                       <CheckCircle2 size={48} />
                     </div>
-                    <h4 className="text-3xl font-bold text-white mb-4">UPLINK_SUCCESSFUL</h4>
-                    <p className="text-foreground/50 font-light max-w-xs">Data packet received. Expect a response within 24 operational hours.</p>
+                    <h4 className="text-3xl font-bold text-white mb-4">Message Sent</h4>
+                    <p className="text-foreground/50 font-light max-w-xs">Thank you for reaching out. I'll get back to you within 24 hours.</p>
                   </motion.div>
                 ) : (
                   <motion.form 
@@ -164,66 +163,66 @@ export default function Contact() {
                   >
                     <div className="grid sm:grid-cols-2 gap-8">
                       <div className="space-y-3">
-                        <label className="text-[10px] font-bold text-foreground/30 uppercase tracking-[0.3em] font-mono ml-1">Entity_Name</label>
+                        <label className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.2em] ml-1">Your Name</label>
                         <input 
                           type="text" 
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           className="w-full glass bg-white/5 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary/50 transition-all font-light" 
-                          placeholder="IDENTIFY YOURSELF" 
+                          placeholder="What's your name?" 
                         />
                       </div>
                       <div className="space-y-3">
-                        <label className="text-[10px] font-bold text-foreground/30 uppercase tracking-[0.3em] font-mono ml-1">Secure_Email</label>
+                        <label className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.2em] ml-1">Email Address</label>
                         <input 
                           type="email" 
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           className="w-full glass bg-white/5 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary/50 transition-all font-light" 
-                          placeholder="EMAIL_ADDRESS" 
+                          placeholder="How can I reach you?" 
                         />
                       </div>
                     </div>
                     
                     <div className="space-y-3">
-                      <label className="text-[10px] font-bold text-foreground/30 uppercase tracking-[0.3em] font-mono ml-1">Subject_Header</label>
+                      <label className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.2em] ml-1">Subject</label>
                       <input 
                         type="text" 
                         required
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         className="w-full glass bg-white/5 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary/50 transition-all font-light" 
-                        placeholder="NATURE_OF_INQUIRY" 
+                        placeholder="What is this regarding?" 
                       />
                     </div>
                     
                     <div className="space-y-3">
-                      <label className="text-[10px] font-bold text-foreground/30 uppercase tracking-[0.3em] font-mono ml-1">Message_Body</label>
+                      <label className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.2em] ml-1">Your Message</label>
                       <textarea 
                         rows={5} 
                         required
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         className="w-full glass bg-white/5 border border-white/5 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-primary/50 transition-all resize-none font-light" 
-                        placeholder="CONSTRUCT_YOUR_MESSAGE"
+                        placeholder="Tell me more about your project..."
                       ></textarea>
                     </div>
                     
                     <Magnetic>
                       <button 
                         disabled={formState === "sending"}
-                        className="btn-premium w-full py-5 flex items-center justify-center gap-3 disabled:opacity-50"
+                        className="btn-premium w-full py-5 flex items-center justify-center gap-3 disabled:opacity-50 shadow-2xl shadow-primary/20"
                       >
                         {formState === "sending" ? (
                           <span className="flex items-center gap-3">
                             <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                            TRANSMITTING...
+                            SENDING...
                           </span>
                         ) : (
-                          <span className="flex items-center gap-3">
-                            INITIALIZE_UPLINK <Send size={20} />
+                          <span className="flex items-center gap-3 text-sm font-black tracking-widest">
+                            SEND MESSAGE <Send size={18} />
                           </span>
                         )}
                       </button>

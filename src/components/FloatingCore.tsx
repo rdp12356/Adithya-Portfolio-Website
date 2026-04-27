@@ -13,34 +13,59 @@ export default function FloatingCore() {
   useFrame((state) => {
     const time = state.clock.getElapsedTime();
     
-    // The rings still rotate, but the photo stays stable
     if (ringRef1.current) {
-      ringRef1.current.rotation.z = time * 0.5;
-      ringRef1.current.rotation.x = Math.sin(time * 0.5) * 0.2;
+      ringRef1.current.rotation.z = time * 0.3;
+      ringRef1.current.rotation.x = Math.sin(time * 0.5) * 0.1;
     }
 
     if (ringRef2.current) {
-      ringRef2.current.rotation.z = -time * 0.3;
-      ringRef2.current.rotation.y = Math.cos(time * 0.3) * 0.2;
+      ringRef2.current.rotation.z = -time * 0.2;
+      ringRef2.current.rotation.y = Math.cos(time * 0.3) * 0.1;
+    }
+
+    if (meshRef.current) {
+      meshRef.current.rotation.y = Math.sin(time * 0.2) * 0.1;
     }
   });
 
   return (
     <group scale={1.5}>
-      <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-        {/* Flat Profile Photo - Perfect Visibility */}
+      <Float speed={2} rotationIntensity={0.2} floatIntensity={0.5}>
+        {/* Holographic Image Core */}
         <mesh ref={meshRef}>
           <circleGeometry args={[1, 64]} />
           <meshBasicMaterial
             map={texture}
             transparent
+            opacity={0.9}
             side={THREE.DoubleSide}
           />
         </mesh>
 
+        {/* Digital Scanning Overlay */}
+        <mesh position={[0, 0, 0.01]}>
+          <circleGeometry args={[1, 64]} />
+          <meshBasicMaterial
+            color="#bd9dff"
+            transparent
+            opacity={0.15}
+            wireframe
+          />
+        </mesh>
+
+        {/* Outer Tech Shell */}
+        <Sphere args={[1.05, 32, 32]}>
+          <meshPhongMaterial
+            color="#bd9dff"
+            wireframe
+            transparent
+            opacity={0.05}
+          />
+        </Sphere>
+
         {/* Energy Rings */}
         <mesh ref={ringRef1} rotation={[Math.PI / 2, 0, 0]}>
-          <torusGeometry args={[1.5, 0.01, 16, 100]} />
+          <torusGeometry args={[1.5, 0.005, 16, 100]} />
           <meshBasicMaterial color="#bd9dff" transparent opacity={0.3} />
         </mesh>
 
@@ -49,8 +74,7 @@ export default function FloatingCore() {
           <meshBasicMaterial color="#6a9cff" transparent opacity={0.2} />
         </mesh>
 
-        {/* Inner Glow */}
-        <pointLight intensity={2} distance={5} color="#bd9dff" />
+        <pointLight intensity={1.5} distance={5} color="#bd9dff" />
       </Float>
     </group>
   );

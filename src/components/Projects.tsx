@@ -11,10 +11,9 @@ export default function Projects() {
   const [displayMode, setDisplayMode] = useState<"bento" | "hologram">("bento");
   const getIcon = (title: string) => {
     switch (title) {
-      case "AuraTune": return <Cpu size={32} />;
-      case "Web Development Projects": return <Globe size={32} />;
-      case "React + TypeScript App": return <Zap size={32} />;
-      case "Robotics Teaching": return <Rocket size={32} />;
+      case "AuraTune": return <Zap size={32} />;
+      case "Robotics Academy": return <Rocket size={32} />;
+      case "Digital Experience Showcase": return <Globe size={32} />;
       default: return <Database size={32} />;
     }
   };
@@ -29,10 +28,10 @@ export default function Projects() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20"
         >
           <div className="max-w-2xl">
-            <h2 className="text-sm font-bold text-primary uppercase tracking-[0.4em] mb-4 font-mono">Archive.v2</h2>
+            <h2 className="text-sm font-bold text-primary uppercase tracking-[0.4em] mb-4">Portfolio Showcase</h2>
             <h3 className="text-5xl md:text-7xl font-bold text-white tracking-tighter leading-[0.9]">
-              Selected <br />
-              <span className="text-gradient">Creations</span>
+              Featured <br />
+              <span className="text-gradient">Projects</span>
             </h3>
             
             <div className="flex gap-2 mt-8">
@@ -40,13 +39,13 @@ export default function Projects() {
                 onClick={() => setDisplayMode("bento")}
                 className={`px-4 py-2 rounded-lg text-[10px] font-bold transition-all flex items-center gap-2 tracking-widest ${displayMode === "bento" ? "bg-primary text-black shadow-[0_0_20px_var(--primary)]" : "glass text-white/40"}`}
               >
-                <LayoutGrid size={14} /> BENTO_VIEW
+                <LayoutGrid size={14} /> Grid View
               </button>
               <button 
                 onClick={() => setDisplayMode("hologram")}
                 className={`px-4 py-2 rounded-lg text-[10px] font-bold transition-all flex items-center gap-2 tracking-widest ${displayMode === "hologram" ? "bg-primary text-black shadow-[0_0_20px_var(--primary)]" : "glass text-white/40"}`}
               >
-                <Box size={14} /> HOLOGRAM_3D
+                <Box size={14} /> Interactive View
               </button>
             </div>
           </div>
@@ -82,52 +81,47 @@ export default function Projects() {
                         {getIcon(project.title)}
                       </div>
 
-                      <div className="flex justify-between items-start mb-6">
-                        <div className="flex flex-wrap gap-2">
-                          {project.tech.slice(0, 3).map((t) => (
-                            <span key={t} className="px-3 py-1 glass rounded-full text-[9px] font-bold text-white/40 tracking-widest uppercase">
-                              {t}
-                            </span>
-                          ))}
+                        <div className="flex justify-between items-center mb-6">
+                          <div className="flex items-center gap-2">
+                             <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.5)]" />
+                             <span className="text-[10px] font-black text-emerald-500 uppercase tracking-widest">Live Project</span>
+                          </div>
                         </div>
-                        <div className="p-3 bg-white/5 rounded-xl group-hover:bg-primary/20 group-hover:text-primary transition-colors">
-                          {getIcon(project.title)}
-                        </div>
-                      </div>
 
-                      <div className="mt-auto">
-                        <h4 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-primary transition-colors flex items-center gap-3">
-                          {project.title}
-                          <ArrowUpRight size={20} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                        </h4>
-                        
-                        <p className={`text-foreground/50 leading-relaxed font-light ${isLarge ? 'text-lg line-clamp-3' : 'text-sm line-clamp-2'} mb-8`}>
-                          {project.description}
-                        </p>
-
-                        <div className="flex gap-4">
-                          <Magnetic>
-                            <a
-                              href={project.github}
-                              target="_blank"
-                              className="flex-1 py-3 px-6 glass rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white/10 transition-all text-sm border border-white/5"
-                            >
-                              Source <Code size={16} />
-                            </a>
-                          </Magnetic>
-                          {project.live && (
-                            <Magnetic>
-                              <a
-                                href={project.live}
-                                target="_blank"
-                                className="flex-1 py-3 px-6 bg-gradient-premium rounded-xl font-bold flex items-center justify-center gap-2 transition-all text-sm shadow-lg shadow-primary/20"
-                              >
-                                Execute <Rocket size={16} />
-                              </a>
-                            </Magnetic>
-                          )}
+                        <div className="flex justify-between items-start mb-8">
+                          <div className="flex flex-wrap gap-2">
+                            {project.tech.slice(0, 3).map((t) => (
+                              <span key={t} className="px-3 py-1 bg-white/5 border border-white/5 rounded-md text-[9px] font-bold text-white/50 tracking-widest uppercase hover:text-primary transition-colors">
+                                {t}
+                              </span>
+                            ))}
+                          </div>
                         </div>
-                      </div>
+
+                        <div className="mt-auto">
+                          <h4 className="text-3xl font-bold text-white mb-4 group-hover:text-primary transition-all flex items-center gap-3 tracking-tighter">
+                            {project.title}
+                            <ArrowUpRight size={22} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all text-primary" />
+                          </h4>
+                          
+                          <p className={`text-white/40 leading-relaxed font-light ${isLarge ? 'text-lg line-clamp-3' : 'text-sm line-clamp-2'} mb-10`}>
+                            {project.description}
+                          </p>
+
+                          <div className="flex gap-4">
+                            {project.live && (
+                              <Magnetic>
+                                <a
+                                  href={project.live}
+                                  target="_blank"
+                                  className="flex-1 py-3.5 px-6 bg-gradient-premium rounded-xl font-bold flex items-center justify-center gap-3 transition-all text-[11px] uppercase tracking-widest shadow-xl shadow-primary/10 group/btn"
+                                >
+                                  Live Demo <Rocket size={16} className="group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5 transition-transform" />
+                                </a>
+                              </Magnetic>
+                            )}
+                          </div>
+                        </div>
                     </div>
                   </motion.div>
                 );
@@ -155,8 +149,8 @@ export default function Projects() {
             target="_blank" 
             className="group flex items-center gap-4 px-8 py-4 glass rounded-full hover:bg-white/5 transition-all"
           >
-            <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.4em] font-mono group-hover:text-white transition-colors">
-              Access_Full_Github_Archives
+            <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.4em] group-hover:text-white transition-colors">
+              View Full GitHub Profile
             </span>
             <div className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />

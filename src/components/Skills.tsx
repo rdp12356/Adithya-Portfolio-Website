@@ -15,21 +15,15 @@ export default function Skills() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center mb-24">
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 shadow-[0_0_20px_rgba(189,157,255,0.2)]"
-          >
-            <Sparkles size={32} />
-          </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-sm uppercase tracking-[0.4em] text-primary font-bold mb-4 font-mono"
+            className="flex items-center gap-3 px-5 py-2 rounded-full glass mb-8 border-white/5"
           >
-            Capabilities_Matrix
-          </motion.h2>
+            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+            <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.3em]">Technical Expertise</span>
+          </motion.div>
+          
           <motion.h3
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +31,7 @@ export default function Skills() {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold tracking-tighter text-white"
           >
-            Tools of the <span className="text-gradient">Trade</span>
+            Skills & <span className="text-gradient">Specializations</span>
           </motion.h3>
         </div>
 
@@ -94,8 +88,8 @@ export default function Skills() {
                 <Cpu size={32} className="animate-pulse" />
               </div>
               <div className="text-center md:text-left">
-                <h4 className="text-2xl font-bold text-white tracking-tight mb-1">Actively Initializing...</h4>
-                <p className="text-sm text-foreground/30 font-mono tracking-widest uppercase">Expanding_Knowledge_Base</p>
+                <h4 className="text-2xl font-bold text-white tracking-tight mb-1">Continuous Growth</h4>
+                <p className="text-sm text-foreground/40 font-medium">Current focus & emerging technologies</p>
               </div>
             </div>
             

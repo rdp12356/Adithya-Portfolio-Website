@@ -4,10 +4,10 @@ import { portfolioData } from "@/data/portfolio";
 
 export default function About() {
   const stats = [
-    { icon: <User size={20} />, label: "Identity", value: "17-year-old Dev", color: "text-purple-400" },
+    { icon: <User size={20} />, label: "Personal", value: "17-year-old Dev", color: "text-purple-400" },
     { icon: <Target size={20} />, label: "Focus", value: "AI & Robotics", color: "text-blue-400" },
-    { icon: <Cpu size={20} />, label: "Logic", value: "Python / JS", color: "text-cyan-400" },
-    { icon: <Sparkles size={20} />, label: "Academy", value: "12th Grade", color: "text-emerald-400" },
+    { icon: <Cpu size={20} />, label: "Core Stack", value: "Python / JS", color: "text-cyan-400" },
+    { icon: <Sparkles size={20} />, label: "Education", value: "12th Grade", color: "text-emerald-400" },
   ];
 
   return (
@@ -18,9 +18,9 @@ export default function About() {
           initial={{ x: "0%" }}
           animate={{ x: "-50%" }}
           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-          className="text-[20vw] font-bold whitespace-nowrap font-mono"
+          className="text-[20vw] font-bold whitespace-nowrap"
         >
-          ADITHYA_SHYAM ADITHYA_SHYAM ADITHYA_SHYAM ADITHYA_SHYAM
+          ADITHYA SHYAM ADITHYA SHYAM ADITHYA SHYAM ADITHYA SHYAM
         </motion.div>
       </div>
 
@@ -34,7 +34,7 @@ export default function About() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 glass rounded-full mb-6 border-white/5">
               <Binary size={14} className="text-primary" />
-              <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em] font-mono">System_Profile_v1.0</span>
+              <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">Developer Profile</span>
             </div>
             
             <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-[0.9]">
@@ -47,7 +47,7 @@ export default function About() {
                 I am <span className="text-white font-medium">Adithya Shyam</span>, a student developer focused on bridging the gap between digital logic and physical hardware. 
               </p>
               <p>
-                Specializing in <span className="text-primary font-mono bg-primary/5 px-2 py-0.5 rounded">Python automation</span> and <span className="text-secondary font-mono bg-secondary/5 px-2 py-0.5 rounded">Robotics</span>, I spend my time building systems that learn, move, and solve real problems.
+                Specializing in <span className="text-primary font-medium bg-primary/5 px-2 py-0.5 rounded">Python automation</span> and <span className="text-secondary font-medium bg-secondary/5 px-2 py-0.5 rounded">Robotics</span>, I spend my time building systems that learn, move, and solve real problems.
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export default function About() {
                     {stat.icon}
                   </div>
                   <div>
-                    <div className="text-[10px] text-foreground/30 uppercase tracking-[0.2em] font-mono mb-0.5">{stat.label}</div>
+                    <div className="text-[10px] text-foreground/30 uppercase tracking-[0.2em] mb-0.5">{stat.label}</div>
                     <div className="text-white font-bold tracking-tight">{stat.value}</div>
                   </div>
                 </motion.div>
@@ -129,8 +129,8 @@ export default function About() {
               className="absolute -bottom-6 -right-6 glass px-6 py-4 rounded-2xl border border-white/10 shadow-2xl backdrop-blur-3xl"
             >
               <div className="flex flex-col">
-                <span className="text-[9px] font-bold text-primary uppercase tracking-[0.3em] font-mono mb-1">Status_Report</span>
-                <span className="text-sm font-bold text-white tracking-widest">READY_FOR_DEPLOYMENT</span>
+                <span className="text-[9px] font-bold text-primary uppercase tracking-[0.3em] mb-1">Availability</span>
+                <span className="text-sm font-bold text-white tracking-widest uppercase">Available for Projects</span>
               </div>
             </motion.div>
           </motion.div>

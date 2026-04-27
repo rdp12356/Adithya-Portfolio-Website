@@ -20,7 +20,7 @@ export default function Experience() {
               </div>
               <div>
                 <h3 className="text-3xl font-bold text-white tracking-tight">Experience</h3>
-                <p className="text-[10px] font-bold text-primary uppercase tracking-[0.3em] font-mono">Professional_Path</p>
+                <p className="text-[10px] font-bold text-primary uppercase tracking-[0.3em]">Career Timeline</p>
               </div>
             </motion.div>
 
@@ -39,7 +39,7 @@ export default function Experience() {
                     <div className="w-4 h-4 rounded-full bg-primary animate-pulse shadow-[0_0_15px_var(--primary)]" />
                   </div>
                   
-                  <div className="flex items-center gap-3 text-primary font-mono text-[10px] font-bold uppercase tracking-widest mb-3">
+                  <div className="flex items-center gap-3 text-primary text-[10px] font-bold uppercase tracking-widest mb-3">
                     <Calendar size={14} /> {exp.period}
                   </div>
                   
@@ -48,7 +48,7 @@ export default function Experience() {
                       <Hexagon size={40} />
                     </div>
                     <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-primary transition-colors">{exp.role}</h4>
-                    <p className="text-white/40 text-sm font-mono tracking-tighter mb-4 flex items-center gap-2">
+                    <p className="text-white/40 text-sm tracking-tighter mb-4 flex items-center gap-2">
                        <span className="w-2 h-2 rounded-full bg-primary/40" /> {exp.company}
                     </p>
                     <p className="text-foreground/50 leading-relaxed font-light italic">
@@ -73,7 +73,7 @@ export default function Experience() {
               </div>
               <div>
                 <h3 className="text-3xl font-bold text-white tracking-tight">Education</h3>
-                <p className="text-[10px] font-bold text-secondary uppercase tracking-[0.3em] font-mono">Academic_Core</p>
+                <p className="text-[10px] font-bold text-secondary uppercase tracking-[0.3em]">Academic Foundation</p>
               </div>
             </motion.div>
 
@@ -92,13 +92,13 @@ export default function Experience() {
                     <div className="w-4 h-4 rounded-full bg-secondary animate-pulse shadow-[0_0_15px_var(--secondary)]" />
                   </div>
 
-                  <div className="flex items-center gap-3 text-secondary font-mono text-[10px] font-bold uppercase tracking-widest mb-3">
+                  <div className="flex items-center gap-3 text-secondary text-[10px] font-bold uppercase tracking-widest mb-3">
                     <Calendar size={14} /> {edu.period}
                   </div>
                   
                   <div className="glass-card p-8 group-hover:border-secondary/20 transition-all duration-500">
                     <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">{edu.degree}</h4>
-                    <p className="text-white/40 text-sm font-mono tracking-tighter mb-4 flex items-center gap-2">
+                    <p className="text-white/40 text-sm tracking-tighter mb-4 flex items-center gap-2">
                        <span className="w-2 h-2 rounded-full bg-secondary/40" /> {edu.school}
                     </p>
                     <p className="text-foreground/50 leading-relaxed font-light italic">

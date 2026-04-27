@@ -43,11 +43,20 @@
 }
 
 @utility glass {
-  @apply backdrop-blur-2xl bg-white/[0.03] border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.8)];
+  @apply backdrop-blur-3xl bg-[#0a0a0a]/40 border border-white/5 shadow-[0_8px_40px_-10px_rgba(0,0,0,0.9)];
 }
 
 @utility glass-card {
-  @apply glass rounded-[2.5rem] overflow-hidden;
+  @apply glass rounded-[2rem] overflow-hidden relative;
+  &::before {
+    content: "";
+    @apply absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none mix-blend-overlay;
+  }
+  &::after {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.03] to-transparent h-[200%] pointer-events-none;
+    animation: scan 8s linear infinite;
+  }
 }
 
 @utility neon-primary {
