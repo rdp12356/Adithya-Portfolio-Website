@@ -86,8 +86,8 @@ export default function HologramProjects() {
   return (
     <div className="relative w-full h-[600px] glass rounded-[3rem] overflow-hidden group border-white/5">
       <div className="absolute top-10 left-10 z-10">
-        <h3 className="text-sm font-bold text-primary uppercase tracking-[0.4em] font-mono mb-2">Holographic_Interface</h3>
-        <p className="text-[10px] text-white/30 uppercase tracking-widest italic">3D_VOXEL_RECONSTRUCTION_ACTIVE</p>
+        <h3 className="text-sm font-bold text-primary uppercase tracking-[0.4em] mb-2">Interactive Portfolio</h3>
+        <p className="text-[10px] text-white/30 uppercase tracking-widest italic">Rendering Interactive View</p>
       </div>
 
       <Canvas>
@@ -125,7 +125,7 @@ export default function HologramProjects() {
               <p className="text-xs text-white/40 leading-relaxed font-light italic">"{projects[activeIndex].description}"</p>
               <div className="flex gap-2">
                 {projects[activeIndex].tech.map((tag: string) => (
-                  <span key={tag} className="text-[8px] font-bold text-primary/60 border border-primary/20 px-2 py-1 rounded-md uppercase font-mono tracking-widest">
+                  <span key={tag} className="text-[8px] font-bold text-primary/60 border border-primary/20 px-2 py-1 rounded-md uppercase tracking-widest">
                     {tag}
                   </span>
                 ))}

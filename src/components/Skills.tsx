@@ -59,7 +59,7 @@ export default function Skills() {
                       <div className="w-5 h-5 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                         <CheckCircle2 size={12} className="text-primary opacity-50 group-hover:opacity-100" />
                       </div>
-                      <span className="text-sm font-mono tracking-tight font-medium">{skill}</span>
+                      <span className="text-sm font-medium">{skill}</span>
                     </li>
                   ))}
                 </ul>

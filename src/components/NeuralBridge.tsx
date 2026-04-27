@@ -65,7 +65,7 @@ export default function NeuralBridge() {
           >
             <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 glass rotate-45 border-l border-b border-primary/20" />
             <p className="text-[10px] font-mono text-primary font-bold uppercase mb-1 flex items-center gap-2">
-               <MessageSquareCode size={12} /> Neural_Bridge
+               <MessageSquareCode size={12} /> AI Assistant
             </p>
             <p className="text-xs text-white/70 leading-relaxed italic">"{transcript}"</p>
           </motion.div>

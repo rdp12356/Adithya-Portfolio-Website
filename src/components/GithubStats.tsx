@@ -40,7 +40,7 @@ export default function GithubStats() {
               <div className="max-w-xl">
                 <div className="inline-flex items-center gap-2 px-3 py-1 glass rounded-full mb-6 border-white/5">
                   <Activity size={14} className="text-primary" />
-                  <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em] font-mono">Neural_Traffic_Analysis</span>
+                  <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.2em]">Activity Analytics</span>
                 </div>
                 <h3 className="text-4xl md:text-5xl font-bold text-white tracking-tighter mb-4">
                   Development <span className="text-gradient">Pulse</span>
@@ -59,7 +59,7 @@ export default function GithubStats() {
                 className="btn-glass flex items-center gap-3 px-8 group"
               >
                 <Terminal size={18} className="text-primary" />
-                <span className="font-mono text-xs tracking-widest font-bold">AUTH_IN_@{githubUsername.toUpperCase()}</span>
+                <span className="text-xs tracking-widest font-bold">Verified: @{githubUsername.toUpperCase()}</span>
               </motion.a>
             </div>
 
@@ -80,7 +80,7 @@ export default function GithubStats() {
                   <div className="text-4xl font-bold text-white tracking-tighter mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-[10px] text-foreground/30 font-bold uppercase tracking-[0.2em] font-mono">{stat.label}</div>
+                  <div className="text-[10px] text-foreground/30 font-bold uppercase tracking-[0.2em]">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -90,10 +90,10 @@ export default function GithubStats() {
               <div className="flex flex-col sm:flex-row justify-between items-center gap-6 mb-8">
                 <div className="flex items-center gap-4">
                   <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.4em] font-mono">Commit_Density_Heatmap</span>
+                  <span className="text-[10px] font-bold text-foreground/40 uppercase tracking-[0.4em]">Activity Heatmap</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-[9px] font-mono text-foreground/20">LESS</span>
+                  <span className="text-[9px] text-foreground/20">LESS</span>
                   <div className="flex gap-1.5">
                     {[0, 1, 2, 3, 4].map(v => (
                       <div key={v} className={`w-3.5 h-3.5 rounded-sm ${
@@ -105,7 +105,7 @@ export default function GithubStats() {
                       }`} />
                     ))}
                   </div>
-                  <span className="text-[9px] font-mono text-foreground/20">MORE</span>
+                  <span className="text-[9px] text-foreground/20">MORE</span>
                 </div>
               </div>
               
